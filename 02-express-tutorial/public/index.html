@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <button onclick="myFunction()">Click here</button>
+    <p id="demo"></p>
+
+    <script>
+      myFunction = async () => {
+        const response = await fetch(`/api/v1/products`);
+        if (response.ok) {
+          const jsonValue = await response.json();
+          console.log("products", jsonValue);
+          document.getElementById("demo").innerHTML = JSON.stringify(jsonValue);
+        } else {
+        }
+      };
+    </script>
+  </body>
+</html>
