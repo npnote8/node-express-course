@@ -4,13 +4,13 @@ const router = express.Router();
 const {
   getPeople,
   addPerson,
-  getPeopleId,
+  getPersonById,
   updatePerson,
   deletePerson,
 } = require("../controllers/people");
 
 router.get("/", getPeople);
-router.get("/:peopleID", getPeopleId);
+router.get("/:id", getPersonById);
 
 router.post("/", addPerson);
 router.put("/:id", updatePerson);

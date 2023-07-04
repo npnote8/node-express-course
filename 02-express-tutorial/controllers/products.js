@@ -1,12 +1,12 @@
 const { products } = require("../data");
 
-const getProduct = (req, res) => {
+const getProducts = (req, res) => {
   return res.json(products);
 };
 
-const getProductId = (req, res) => {
-  const { productID } = req.params;
-  const idToFind = Number(productID);
+const getProductById = (req, res) => {
+  const { id } = req.params;
+  const idToFind = Number(id);
   const product = products.find((p) => p.id === idToFind);
   if (!product) {
     return res.status(404).json({ message: "That product was not found" });
@@ -15,6 +15,6 @@ const getProductId = (req, res) => {
 };
 
 module.exports = {
-  getProduct,
-  getProductId,
+  getProducts,
+  getProductById,
 };

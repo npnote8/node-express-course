@@ -4,9 +4,9 @@ const getPeople = (req, res) => {
   return res.json({ success: true, data: people });
 };
 
-const getPeopleId = (req, res) => {
-  const { peopleID } = req.params;
-  const idToFind = Number(peopleID);
+const getPersonById = (req, res) => {
+  const { id } = req.params;
+  const idToFind = Number(id);
   const person = people.find((p) => p.id === idToFind);
 
   if (!person) {
@@ -56,7 +56,7 @@ const deletePerson = (req, res) => {
 
 module.exports = {
   getPeople,
-  getPeopleId,
+  getPersonById,
   addPerson,
   updatePerson,
   deletePerson,
