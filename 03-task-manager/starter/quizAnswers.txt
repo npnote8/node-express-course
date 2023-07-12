@@ -1,6 +1,12 @@
 1. Quickly explain how middleware is used in an Express application.
 
 Middleware functions in an Express application work between the request and response cycle. Middleware functions usually add information to the request or response objects. They also can terminate the HTTP request by sending a response or forward it for further processing by calling next() in the stack. 
+An Express application can use the following types of middleware:
+- Application-level middleware
+- Router-level middleware
+- Error-handling middleware
+- Built-in middleware
+- Third-party middleware
 
 2. What does CRUD stand for?
 
