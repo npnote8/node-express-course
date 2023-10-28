@@ -1,0 +1,21 @@
+1. Quickly explain how middleware is used in an Express application.
+
+Middleware functions in an Express application work between the request and response cycle. Middleware functions usually add information to the request or response objects. They also can terminate the HTTP request by sending a response or forward it for further processing by calling next() in the stack. 
+An Express application can use the following types of middleware:
+- Application-level middleware
+- Router-level middleware
+- Error-handling middleware
+- Built-in middleware
+- Third-party middleware
+
+2. What does CRUD stand for?
+
+Create, read, update and delete
+
+3. You are careful to store your sensitive information in a .env file.
+   1. How do you get your app to access the information in the .env file?
+   2. How do you protect the contents of the .env file so that it is not stored in your github repository?
+
+   3.1. require the dotenv module to read values in .env file and then use the process.env.variableName to get the value
+
+   3.2. by adding .env to .gitignore file
